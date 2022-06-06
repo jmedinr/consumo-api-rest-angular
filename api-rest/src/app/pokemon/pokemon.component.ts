@@ -27,6 +27,7 @@ export class PokemonComponent implements OnInit {
       this.urlImage = data.sprites.front_default;
       this.pokemonAbility = data.abilities.map((ability: { ability: { name: any; }; }) => ability.ability.name).join(", ");
     });
-  }
+    this.pokemonName = "";
+  };
 
 }

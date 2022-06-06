@@ -4,9 +4,9 @@
   </mat-form-field>
   <button mat-raised-button color="primary" (click)="searchPokemon()">Buscar Pokemon</button>
   <section>
-    <img *ngIf="pokemonName" [src]="urlImage">
+    <img [src]="urlImage">
   </section>
-  <section *ngIf="pokemonName">{{ pokemonAbility }}</section>
+  <section>{{ pokemonAbility }}</section>
 </div>
 
 
