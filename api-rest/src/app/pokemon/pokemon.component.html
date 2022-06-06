@@ -1,0 +1,12 @@
+<div class="contenedor">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Nombre del Pokemon" type="text" [(ngModel)]="pokemonName">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="searchPokemon()">Buscar Pokemon</button>
+  <section>
+    <img *ngIf="pokemonName" [src]="urlImage">
+  </section>
+  <section *ngIf="pokemonName">{{ pokemonAbility }}</section>
+</div>
+
+
