@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../services/pokemon.service';
+import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-pokemon',
@@ -8,10 +9,15 @@ import { PokemonService } from '../services/pokemon.service';
 })
 export class PokemonComponent implements OnInit {
 
-  constructor(private pokemonService: PokemonService) {
+  angForm: FormGroup;
+
+  constructor(private pokemonService: PokemonService, fb: FormBuilder) {
     this.pokemonName = "";
     this.urlImage = "";
     this.pokemonAbility = "";
+    this.angForm = fb.group({
+      name: ['', Validators.required ]
+    });
    }
 
   pokemonName: string;
@@ -19,7 +25,6 @@ export class PokemonComponent implements OnInit {
   pokemonAbility: string;
 
   ngOnInit(): void {
-
   }
 
   searchPokemon() {
