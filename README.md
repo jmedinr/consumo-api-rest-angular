@@ -1,7 +1,7 @@
 # consumo-api-rest-angular
 Proyecto para consumir una API con Angular
 
-#Video explicativo
+# Video explicativo
 
 https://drive.google.com/file/d/1MdUcnFKEINBXO_Fb94N7OX6YfK8J2FVt/view?usp=sharing
 
